@@ -1,15 +1,18 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <!-- <img src="http://img03.deviantart.net/cdc0/i/2014/302/b/1/tool_time__home_improvement__by_pointingmonkey-d84ju6q.png" class="img-responsive" alt="Responsive image"> -->
 <div class="container">
+  <div class="jumbotron">
 
-  <h3><%= flash[:notice] %></h3>
-  <h1><%= @tool.name %> - <%= @tool.quantity %> - In Stock</h1>
-  <h3><%= @tool.price %></h3>
 
-  <%= link_to "Edit this Tool", edit_tool_path(@tool) %>
-  <%= link_to "Delete this Tool", tool_path(@tool), method: :delete %>
-  <%= link_to "Tool Chest", tools_path(@tool) %>
+    <h3><%= flash[:notice] %></h3>
+    <h1><%= @tool.name %> - <%= @tool.quantity %> - In Stock</h1>
+    <h3><%= @tool.price %></h3>
 
+    <h5><%= link_to "Edit this Tool", edit_tool_path(@tool) %></h5>
+    <h5><%= link_to "Delete this Tool", tool_path(@tool), method: :delete %></h5>
+    <h5><%= link_to "Tool Chest", tools_path(@tool) %></h5>
+
+  </div>
 </div>
 
 <img src="http://www.cliqr.com/wp-content/uploads/2016/04/toolbox.jpg" class="img-responsive" alt="Responsive image">

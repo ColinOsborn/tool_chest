@@ -1,13 +1,21 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <div class="container">
+  <div class="jumbotron">
+    <div class=".col-md-4">
+      <!-- <img src="http://img.diytrade.com/cdimg/1306022/18246551/0/1295599644/Tool_Cabinet_TBR3007B-X.jpg" class="img-responsive" alt="Responsive image"> -->
+      <div class=".col-md-6">
 
-  <% @tools.each do |tool| %>
-    <%= tool.name %> - <%= tool.quantity %>
-  <% end %><br>
+        <h2>Tool Chest</h2>
+        <% @tools.each do |tool| %>
+        <h4><%= tool.name %> - <%= tool.quantity %></h4>
+        <% end %><br>
 
-  <%= link_to "Create/Edit Tools", new_tool_path(@tool) %>
+        <%= link_to "Create/Edit Tools", new_tool_path(@tool) %>
+      </div>
+    </div>
+  </div>
 </div>
-<img src="http://www.northerntool.com/images/product/2000x2000/278/278091_2000x2000.jpg" class="img-responsive" alt="Responsive image">
+<!-- <img src="http://thumbnail.image.rakuten.co.jp/@0_mall/fbird/cabinet/00348829/st-9705a-6.jpg" class="img-responsive" alt="Responsive image"> -->
 
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
