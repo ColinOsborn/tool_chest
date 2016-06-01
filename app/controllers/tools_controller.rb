@@ -15,8 +15,10 @@ class ToolsController < ApplicationController
   def create
     @tool = Tool.new(tool_params)
     if @tool.save
-      redirect_to tool_path(@tool)
+      redirect_to @tool
+      flash[:notice] = "Tool Saved!"
     else
+      flash[:notice] = @tool.errors.full_messages.join(", ")
       render :new
     end
   end
@@ -38,6 +40,10 @@ class ToolsController < ApplicationController
     @tool = Tool.find(params[:id])
     @tool.destroy
     redirect_to tools_path
+  end
+
+  def most_recent_tool
+    @tool = Tool.find(params[:id])
   end
 
   private

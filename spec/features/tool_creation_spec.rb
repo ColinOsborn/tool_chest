@@ -1,5 +1,5 @@
-require 'rails_helper'
 
+require 'rails_helper'
 RSpec.feature "Tool management", type: :feature do
   # it refers to a unit level
   scenario "user creates a new tool" do

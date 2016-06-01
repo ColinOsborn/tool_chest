@@ -1,4 +1,13 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<div class="container">
 
   <% @tools.each do |tool| %>
     <%= tool.name %> - <%= tool.quantity %>
-  <% end %>
+  <% end %><br>
+
+  <%= link_to "Create/Edit Tools", new_tool_path(@tool) %>
+</div>
+<img src="http://www.northerntool.com/images/product/2000x2000/278/278091_2000x2000.jpg" class="img-responsive" alt="Responsive image">
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>

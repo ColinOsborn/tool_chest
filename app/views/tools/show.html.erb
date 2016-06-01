@@ -1,6 +1,16 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!-- <img src="http://img03.deviantart.net/cdc0/i/2014/302/b/1/tool_time__home_improvement__by_pointingmonkey-d84ju6q.png" class="img-responsive" alt="Responsive image"> -->
+<div class="container">
 
-  <h1><%= @tool.name %> - <%= "InStock"@tool.quantity %></h1>
+  <h3><%= flash[:notice] %></h3>
+  <h1><%= @tool.name %> - <%= @tool.quantity %> - In Stock</h1>
   <h3><%= @tool.price %></h3>
 
   <%= link_to "Edit this Tool", edit_tool_path(@tool) %>
   <%= link_to "Delete this Tool", tool_path(@tool), method: :delete %>
+  <%= link_to "Tool Chest", tools_path(@tool) %>
+
+</div>
+
+<img src="http://www.cliqr.com/wp-content/uploads/2016/04/toolbox.jpg" class="img-responsive" alt="Responsive image">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
