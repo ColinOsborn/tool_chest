@@ -10,7 +10,8 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to user_path(@user)
     else
-      # re-render new view if validations don't pass
+      flash.now[:error] = @user.errors.full_messages.join(", ")
+      render :new
     end
   end
 

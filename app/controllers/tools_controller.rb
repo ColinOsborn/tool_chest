@@ -18,7 +18,7 @@ class ToolsController < ApplicationController
       redirect_to @tool
       flash[:notice] = "Tool Saved!"
     else
-      flash[:notice] = @tool.errors.full_messages.join(", ")
+      flash[:error] = @tool.errors.full_messages.join(", ")
       render :new
     end
   end
@@ -42,14 +42,10 @@ class ToolsController < ApplicationController
     redirect_to tools_path
   end
 
-  # def most_recent_tool
-  #   @tool = Tool.find(params[:id])
-  # end
-
   private
 
   def tool_params
-    params.require(:tool).permit(:name, :price, :quantity)
+    params.require(:tool).permit(:name, :price, :quantity, :category_id)
   end
 
 end
