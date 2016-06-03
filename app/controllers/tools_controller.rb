@@ -42,9 +42,9 @@ class ToolsController < ApplicationController
     redirect_to tools_path
   end
 
-  def most_recent_tool
-    @tool = Tool.find(params[:id])
-  end
+  # def most_recent_tool
+  #   @tool = Tool.find(params[:id])
+  # end
 
   private
 

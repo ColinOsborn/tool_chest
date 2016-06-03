@@ -18,7 +18,7 @@ RSpec.feature "Tool management", type: :feature do
     # can scope this down as specific as you'd ever want
     # can certaintly scope down to find images, and also nested divs and imgs
     #ul li:nth-child(3)
-    within(".tool_info li:nth-child(1)") do
+    within(".tool_i li:nth-child(1)") do
       expect(page).to have_content("Screwdriver")
     end
 
